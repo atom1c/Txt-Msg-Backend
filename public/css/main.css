@@ -1,0 +1,82 @@
+/*
+ * Created by Jake on 7/29/2014.
+ */
+
+/* UTIL CLASSES */
+.TxtMsgApp-util-fillparent {
+    width: 100%;
+}
+
+.TxtMsgApp-util-appbounds {
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+}
+
+/* App */
+body, html {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.TxtMsgApp {
+    height: 100%;
+}
+
+/* Content Area */
+.TxtMsgApp-content {
+    height: 90%;
+}
+
+.TxtMsgApp-content > div {
+    /* Float all children of .content left*/
+    float: left;
+}
+
+.TxtMsgApp-content-main {
+    width: 70%;
+    height: 100%;
+}
+
+.TxtMsgApp-content-main-textarea {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.TxtMsgApp-content-main-textarea-msg {
+    margin: 0;
+}
+
+/* Sidebar */
+.TxtMsgApp-content-sidebar {
+    width: 30%;
+}
+
+.TxtMsgApp-content-sidebar-userlist-title {
+    font-weight: bold;
+}
+
+.TxtMsgApp-content-sidebar-userlist-list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+/* Message Controls */
+.TxtMsgApp-controls {
+    height: 10%;
+}
+
+.TxtMsgApp-controls-sendform-components-send, .TxtMsgApp-controls-sendform-components-text {
+    float: left;
+}
+
+.TxtMsgApp-controls-sendform-components-text {
+    width: 90%;
+}
+
+.TxtMsgApp-controls-sendform-components-send {
+    width: 10%;
+}
