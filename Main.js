@@ -15,12 +15,12 @@ app.set("userlist", []);
 
 io.on('connection', function (socket) {
     socket.on('JOINSEND', function (data) {
-        console.log("User join: " + data.username);
         if (app.get("userlist").indexOf(data.user) > -1) {
             socket.emit("ERROR", {"msg": "User already in database"})
         } else {
             app.get("userlist").push(data);
             socket.broadcast.emit("USERUPDATE", app.get("userlist"));
+            socket.emit("USERUPDATE", app.get("userlist"));
         }
     });
 
@@ -32,7 +32,7 @@ io.on('connection', function (socket) {
         }
     });
 
-    socket.on('DISCONNECTSEND', function (data) {
+    socket.on('disconnect', function (data) {
         if (app.get("userlist").indexOf(data.user) < -1) {
             socket.emit("ERROR", {"msg": "User not in database"})
         } else {
