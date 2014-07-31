@@ -1,23 +1,9 @@
-<<<<<<< HEAD
-<html>
-<head>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
-</head>
-<body style="font-family: 'Open Sans', sans-serif;">
-<div class="TxtMsgApp-content">
-    <div class="TxtMsgApp-content-sidebar">
-        <div class="TxtMsgApp-content-sidebar-userlist" ng-controller="UserListCtrl">
-            <span class="TxtMsgApp-content-sidebar-userlist-title" style="font-family: 'Open Sans', sans-serif;">Users ({{ getUsers().length }})</span>
-            <ul class="TxtMsgApp-content-sidebar-userlist-list">
-                <li class="TxtMsgApp-content-sidebar-userlist-list-item" ng-repeat="user in getUsers()" style="font-family: 'Open Sans', sans-serif;">{{ user.username
-=======
 <div class="TxtMsgApp-content">
     <div class="TxtMsgApp-content-sidebar">
         <div class="TxtMsgApp-content-sidebar-userlist" ng-controller="UserListCtrl">
             <span class="TxtMsgApp-content-sidebar-userlist-title">Users ({{ getUsers().length }})</span>
             <ul class="TxtMsgApp-content-sidebar-userlist-list">
                 <li class="TxtMsgApp-content-sidebar-userlist-list-item" ng-repeat="user in getUsers()">{{ user.username
->>>>>>> FETCH_HEAD
                     }}
                 </li>
             </ul>
@@ -25,30 +11,13 @@
     </div>
     <div class="TxtMsgApp-content-main" ng-controller="MsgAreaCtrl">
         <div class="TxtMsgApp-content-main-textarea" name="msg-area" scroll-glue>
-<<<<<<< HEAD
-            <p class="TxtMsgApp-content-main-textarea-msg" ng-repeat="chat in chats" style="font-family: 'Open Sans', sans-serif;">{{ chat.text }}</p>
-=======
             <p class="TxtMsgApp-content-main-textarea-msg" ng-repeat="chat in chats">{{ chat.text }}</p>
->>>>>>> FETCH_HEAD
         </div>
     </div>
 </div>
 <div class="TxtMsgApp-controls">
     <form class="TxtMsgApp-controls-sendform" novalidate ng-controller="FormCtrl" name="form">
         <div class="TxtMsgApp-controls-sendform-components">
-<<<<<<< HEAD
-            <div class="TxtMsgApp-controls-sendform-components-text ">
-                <input class="TxtMsgApp-controls-sendform-components-text-field TxtMsgApp-util-fillparent"
-                       type="text" name="text"
-                       ng-model="data.txt" required maxlength="160" style="font-family: 'Open Sans', sans-serif;">
-            </div>
-
-            <div class="TxtMsgApp-controls-sendform-components-send ">
-                <button class="TxtMsgApp-controls-sendform-components-send-field TxtMsgApp-util-fillparent"
-                        ng-click="send(data)"
-                        ng-disabled="form.$invalid" style="font-family: 'Open Sans', sans-serif;">
-                    Send
-=======
             <div class="TxtMsgApp-controls-sendform-components-text">
                 <input class="TxtMsgApp-controls-sendform-components-text-field TxtMsgApp-util-fillparent"
                        type="text" name="text"
@@ -59,15 +28,8 @@
                 <button class="TxtMsgApp-controls-sendform-components-send-field TxtMsgApp-util-fillparent"
                         ng-click="send(data)"
                         ng-disabled="form.$invalid">Send
->>>>>>> FETCH_HEAD
                 </button>
             </div>
         </div>
     </form>
-<<<<<<< HEAD
 </div>
-</body>
-</html>
-=======
-</div>
->>>>>>> FETCH_HEAD

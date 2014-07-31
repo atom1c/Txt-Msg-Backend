@@ -17,11 +17,14 @@ app.use("/", express.static(__dirname + '/public'));
 app.set("userlist", []);
 
 io.on('connection', function (socket) {
+    var myuser = null;
+
     socket.on('JOINSEND', function (data) {
         if (app.get("userlist").indexOf(data.user) > -1) {
             socket.emit("ERROR", {"msg": "User already in database"})
         } else {
             app.get("userlist").push(data);
+            myuser = data;
             socket.broadcast.emit("USERUPDATE", app.get("userlist"));
             socket.emit("USERUPDATE", app.get("userlist"));
         }
@@ -39,8 +42,10 @@ io.on('connection', function (socket) {
         if (app.get("userlist").indexOf(data.user) < -1) {
             socket.emit("ERROR", {"msg": "User not in database"})
         } else {
-            app.set("userlist", app.get("userlist").splice(app.get("userlist").indexOf(data), 1));
+            console.log("Before: " + JSON.stringify(app.get("userlist")));
+            app.get("userlist").splice(app.get("userlist").indexOf(myuser), 1);
             socket.broadcast.emit("USERUPDATE", app.get("userlist"));
+            console.log("After: " + JSON.stringify(app.get("userlist")));
         }
     });
 });
