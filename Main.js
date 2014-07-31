@@ -9,6 +9,9 @@ var server = app.listen(app.get('port'), function () {
 
 var io = require('socket.io')(server);
 
+console.log("test");
+console.log(__dirname + '/public');
+
 app.use("/", express.static(__dirname + '/public'));
 
 app.set("userlist", []);
