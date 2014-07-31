@@ -4,7 +4,11 @@
 
 /* UTIL CLASSES */
 .TxtMsgApp-util-fillparent {
+<<<<<<< HEAD
     display: inline-block;
+=======
+    width: 100%;
+>>>>>>> FETCH_HEAD
 }
 
 .TxtMsgApp-util-appbounds {
@@ -15,6 +19,12 @@
 
 /* App */
 body, html {
+<<<<<<< HEAD
+=======
+    margin: 0;
+    width: 100%;
+    height: 100%;
+>>>>>>> FETCH_HEAD
 }
 
 .TxtMsgApp {
@@ -24,7 +34,10 @@ body, html {
 /* Content Area */
 .TxtMsgApp-content {
     height: 90%;
+<<<<<<< HEAD
     background-color: #e74c3c;
+=======
+>>>>>>> FETCH_HEAD
 }
 
 .TxtMsgApp-content > div {
@@ -35,7 +48,10 @@ body, html {
 .TxtMsgApp-content-main {
     width: 70%;
     height: 100%;
+<<<<<<< HEAD
     background-color: #c0392b;
+=======
+>>>>>>> FETCH_HEAD
 }
 
 .TxtMsgApp-content-main-textarea {
@@ -68,6 +84,7 @@ body, html {
 
 /* Message Controls */
 .TxtMsgApp-controls {
+<<<<<<< HEAD
     bottom: 0;
     left: 0;
     right: 0;
@@ -104,4 +121,19 @@ body, html {
     color: #ecf0f1;
     background-color: #c0392b;
     border: none;
+=======
+    height: 10%;
+}
+
+.TxtMsgApp-controls-sendform-components-send, .TxtMsgApp-controls-sendform-components-text {
+    float: left;
+}
+
+.TxtMsgApp-controls-sendform-components-text {
+    width: 90%;
+}
+
+.TxtMsgApp-controls-sendform-components-send {
+    width: 10%;
+>>>>>>> FETCH_HEAD
 }
