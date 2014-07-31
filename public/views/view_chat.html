@@ -1,0 +1,43 @@
+<html>
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+</head>
+<body style="font-family: 'Open Sans', sans-serif;">
+<div class="TxtMsgApp-content">
+    <div class="TxtMsgApp-content-sidebar">
+        <div class="TxtMsgApp-content-sidebar-userlist" ng-controller="UserListCtrl">
+            <span class="TxtMsgApp-content-sidebar-userlist-title" style="font-family: 'Open Sans', sans-serif;">Users ({{ getUsers().length }})</span>
+            <ul class="TxtMsgApp-content-sidebar-userlist-list">
+                <li class="TxtMsgApp-content-sidebar-userlist-list-item" ng-repeat="user in getUsers()" style="font-family: 'Open Sans', sans-serif;">{{ user.username
+                    }}
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="TxtMsgApp-content-main" ng-controller="MsgAreaCtrl">
+        <div class="TxtMsgApp-content-main-textarea" name="msg-area" scroll-glue>
+            <p class="TxtMsgApp-content-main-textarea-msg" ng-repeat="chat in chats" style="font-family: 'Open Sans', sans-serif;">{{ chat.text }}</p>
+        </div>
+    </div>
+</div>
+<div class="TxtMsgApp-controls">
+    <form class="TxtMsgApp-controls-sendform" novalidate ng-controller="FormCtrl" name="form">
+        <div class="TxtMsgApp-controls-sendform-components">
+            <div class="TxtMsgApp-controls-sendform-components-text ">
+                <input class="TxtMsgApp-controls-sendform-components-text-field TxtMsgApp-util-fillparent"
+                       type="text" name="text"
+                       ng-model="data.txt" required maxlength="160" style="font-family: 'Open Sans', sans-serif;">
+            </div>
+
+            <div class="TxtMsgApp-controls-sendform-components-send ">
+                <button class="TxtMsgApp-controls-sendform-components-send-field TxtMsgApp-util-fillparent"
+                        ng-click="send(data)"
+                        ng-disabled="form.$invalid" style="font-family: 'Open Sans', sans-serif;">
+                    Send
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

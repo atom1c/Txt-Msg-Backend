@@ -1,0 +1,16 @@
+<div class="TxtMsgApp-login" ng-controller="LoginCtrl">
+    <span class="TxtMsgApp-login-title">Login</span>
+
+    <p class="TxtMsgApp-login-status">Authorization Status: <span class="TxtMsgApp-login-status-status"
+                                                                  ng-bind="authStatus"></span></p>
+
+    <form class="TxtMsgApp-login-form" name="form" novalidate>
+        Username: <input class="TxtMsgApp-login-form-username" name="username" type="text" ng-model="data.username"
+                         required/><br/>
+        Password: <input class="TxtMsgApp-login-form-password" name="password" type="password"
+                         ng-model="data.password"/><br/>
+        <button class="TxtMsgApp-login-form-submit" ng-disabled="form.$invalid" ng-click="submit(data,form.$valid)">
+            Submit
+        </button>
+    </form>
+</div>

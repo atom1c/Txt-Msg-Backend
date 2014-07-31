@@ -1,0 +1,10 @@
+{
+    "name": "Txt-Msg-Backend",
+    "description": "An interface and server side to send text messages from a computer",
+    "author": "Jake Billings <jake@eakjb.com>",
+    "dependencies": {
+        "express": ">= 2.3.x",
+        "socket.io": ">= 1.0.x"
+    },
+    "engine": "node >= 0.10.x"
+}
